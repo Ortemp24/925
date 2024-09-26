@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bijou - luxury redefined</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -51,7 +52,82 @@
             overflow: hidden;
         }
 
-        /* Background Images for fragrance and fashion */
+        /* Glitching Bijou and Intro Section */
+        .glitch {
+            font-family: 'Raleway', sans-serif;
+            font-size: 4rem;
+            font-weight: 500;
+            color: #000;
+            letter-spacing: 0.1rem;
+            position: relative;
+            animation: glitch 1.5s infinite;
+        }
+
+        .glitch::before, .glitch::after {
+            content: "bijou";
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.8;
+            clip: rect(0, 900px, 0, 0);
+            animation: glitch 1.5s infinite;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 red;
+            animation-delay: 0.1s;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 blue;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes glitch {
+            0% { clip: rect(0, 900px, 0, 0); }
+            50% { clip: rect(20px, 900px, 40px, 0); }
+            100% { clip: rect(0, 900px, 0, 0); }
+        }
+
+        .luxury-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .notify-section {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .email-input {
+            padding: 10px;
+            font-size: 1rem;
+            width: 300px;
+            border: 2px solid #000;
+            margin-bottom: 10px;
+        }
+
+        .notify-btn {
+            padding: 10px 30px;
+            font-size: 1rem;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .notify-btn:hover {
+            background-color: #333;
+        }
+
+        /* Fragrance and Fashion Section */
         .horizontal-section {
             display: flex;
             width: 100%;
@@ -86,23 +162,42 @@
             padding: 20px;
         }
 
+        /* Elegant Fonts */
         .content h2 {
-            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
             text-transform: lowercase;
+            letter-spacing: 0.1rem;
         }
 
         .content p {
-            font-size: 1.2rem;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.4rem;
             text-transform: lowercase;
             margin-top: 10px;
         }
 
-        /* Sleek font */
-        h1, h2, p {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
+        /* View Our Lookbook Button */
+        .lookbook-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #000;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            margin-top: 20px;
         }
 
+        .lookbook-btn:hover {
+            background-color: #fff;
+            color: #000;
+            border-color: #000;
+        }
+
+        /* Collage Section */
         .collage {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -162,6 +257,16 @@
         <img src="images/logo.png" alt="Bijou Logo"> <!-- Replace with actual path -->
     </div>
 
+    <!-- Glitching Bijou Intro Section -->
+    <section class="section">
+        <div class="glitch">bijou</div>
+        <div class="luxury-text">luxury meets future</div>
+        <div class="notify-section">
+            <input class="email-input" type="email" placeholder="Enter your email">
+            <button class="notify-btn">Get Notified</button>
+        </div>
+    </section>
+
     <!-- Horizontal Split Fragrance and Fashion -->
     <section class="horizontal-section">
         <!-- Fragrance Section -->
@@ -169,7 +274,8 @@
             <img src="images/M-cologne" alt="Fragrance Background"> <!-- Replace with actual image -->
             <div class="content">
                 <h2>fragrance</h2>
-                <p>indulge in the essence of bijou, a blend of elegance and modern sophistication</p> <!-- Updated caption -->
+                <p>a blend of elegance and modern sophistication</p> <!-- Updated caption -->
+                <a href="#" class="lookbook-btn">View Our Lookbook</a> <!-- Lookbook Button -->
             </div>
         </div>
 
@@ -178,7 +284,8 @@
             <img src="images/all-black-lght" alt="Fashion Background"> <!-- Replace with actual image -->
             <div class="content">
                 <h2>fashion</h2>
-                <p>redefining luxury with cutting-edge craftsmanship and design</p> <!-- Shortened caption -->
+                <p>redefining luxury with bold design and detail</p> <!-- Shortened caption -->
+                <a href="#" class="lookbook-btn">View Our Lookbook</a> <!-- Lookbook Button -->
             </div>
         </div>
     </section>
@@ -188,8 +295,7 @@
         <div class="collage">
             <div class="collage-item"><img src="images/pixie-cut-model.jpg" alt="Bijou Collage 1"></div> <!-- Replace paths with actual paths -->
             <div class="collage-item"><img src="images/bijou-AA-model.jpg" alt="Bijou Collage 2"></div>
-            <div class="collage-item"><img src="images/bijou-mugler.jpg" alt="Bijou Collage 3"></div>
-            <div class="collage-item"><img src="images/male-model.jpg" alt="Bijou Collage 4"></div>
+            <div class="collage-item"><img src="images/bijou-mugler" alt="Bijou Collage 3"></div>
         </div>
     </section>
 
@@ -197,20 +303,9 @@
     <section class="coming-soon">
         <div>
             <p>coming soon</p>
-            <img src="images/logo.png" alt="Bijou Logo"> <!-- Replace with actual path -->
+            <img src="images/logo.png" alt="Bijou Logo Small"> <!-- Replace with actual path -->
         </div>
     </section>
-
-    <script>
-        const logo = document.getElementById('logo');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                logo.classList.add('logo-hidden');
-            } else {
-                logo.classList.remove('logo-hidden');
-            }
-        });
-    </script>
 
 </body>
 
