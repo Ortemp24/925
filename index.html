@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIJOU - Luxury Redefined</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>bijou - luxury redefined</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: 'Orbitron', sans-serif;
-            background-color: #000;
-            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: #333;
             overflow-x: hidden;
         }
 
@@ -51,89 +51,56 @@
             overflow: hidden;
         }
 
-        .bg-image {
+        /* Background Images for fragrance and fashion */
+        .horizontal-section {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .half-section {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .half-section img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0.5;
             z-index: -1;
-            opacity: 0.7;
         }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 0;
-        }
-
-        .content {
-            position: relative;
+        .half-section .content {
             z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
+            color: #fff;
             padding: 20px;
         }
 
-        h1 {
-            font-size: 6rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            font-weight: 700;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s forwards, glitch 3s infinite alternate;
+        .content h2 {
+            font-size: 2.5rem;
+            text-transform: lowercase;
         }
 
-        p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            max-width: 600px;
+        .content p {
+            font-size: 1.2rem;
+            text-transform: lowercase;
+            margin-top: 10px;
+        }
+
+        /* Sleek font */
+        h1, h2, p {
+            font-family: 'Roboto', sans-serif;
             font-weight: 300;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s 0.5s forwards;
-        }
-
-        .signup-form {
-            margin-top: 30px;
-            opacity: 0;
-            transform: translateY(50px);
-            animation: fadeInUp 1s 1s forwards;
-        }
-
-        .signup-form input {
-            padding: 15px;
-            width: 300px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-bottom: 1px solid #fff;
-            color: #fff;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1rem;
-        }
-
-        .signup-form button {
-            padding: 15px 30px;
-            background-color: transparent;
-            color: #fff;
-            border: 1px solid #fff;
-            cursor: pointer;
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .signup-form button:hover {
-            background-color: #fff;
-            color: #000;
         }
 
         .collage {
@@ -164,129 +131,73 @@
             transform: scale(1.1);
         }
 
-        /* New Fragrance and Fashion Section Styles */
-        .fragrance-section, .fashion-section {
-            height: 100vh;
+        /* Coming Soon Section */
+        .coming-soon {
+            height: 50vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .fragrance-bg {
-            background-image: url('images/M-cologne'); /* Replace with actual path */
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            opacity: 0.8;
-        }
-
-        .fashion-bg {
-            background-image: url('images/all-black-lght'); /* Replace with actual path */
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            opacity: 0.8;
-        }
-
-        .section-content {
-            position: relative;
-            z-index: 1;
+            background-color: #000;
             color: #fff;
-            padding: 40px;
-            max-width: 600px;
+            font-size: 2rem;
         }
 
-        .section-title {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            letter-spacing: 5px;
+        .coming-soon img {
+            max-height: 100px;
+            margin-top: 20px;
         }
 
-        .section-description {
+        .coming-soon p {
             font-size: 1.5rem;
-            line-height: 1.5;
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Glitch Effect */
-        @keyframes glitch {
-            0% {
-                text-shadow: -2px -2px #ff00c1, 2px 2px #00c7ff;
-            }
-
-            25% {
-                text-shadow: 2px -2px #ff00c1, -2px 2px #00c7ff;
-            }
-
-            50% {
-                text-shadow: -2px 2px #ff00c1, 2px -2px #00c7ff;
-            }
-
-            75% {
-                text-shadow: 2px 2px #ff00c1, -2px -2px #00c7ff;
-            }
-
-            100% {
-                text-shadow: -2px -2px #ff00c1, 2px 2px #00c7ff;
-            }
-        }
     </style>
 </head>
 
 <body>
+
     <!-- Logo Section -->
     <div class="logo-section" id="logo">
         <img src="images/logo.png" alt="Bijou Logo"> <!-- Replace with actual path -->
     </div>
 
-    <section class="section">
-        <img src="images/bijou-red-lip" alt="Bijou" class="bg-image"> <!-- Replace with actual path -->
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>BIJOU</h1>
-            <p>Luxury Meets Future</p> <!-- Updated catchphrase -->
-            <form class="signup-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Get Notified</button>
-            </form>
+    <!-- Horizontal Split Fragrance and Fashion -->
+    <section class="horizontal-section">
+        <!-- Fragrance Section -->
+        <div class="half-section">
+            <img src="images/M-cologne" alt="Fragrance Background"> <!-- Replace with actual image -->
+            <div class="content">
+                <h2>fragrance</h2>
+                <p>indulge in the essence of bijou, a blend of elegance and modern sophistication</p> <!-- Updated caption -->
+            </div>
+        </div>
+
+        <!-- Fashion Section -->
+        <div class="half-section">
+            <img src="images/all-black-lght" alt="Fashion Background"> <!-- Replace with actual image -->
+            <div class="content">
+                <h2>fashion</h2>
+                <p>redefining luxury with cutting-edge craftsmanship and design</p> <!-- Shortened caption -->
+            </div>
         </div>
     </section>
 
-    <!-- Fragrance Section -->
-    <section class="fragrance-section">
-        <div class="fragrance-bg"></div>
-        <div class="section-content">
-            <h2 class="section-title">Fragrance</h2>
-            <p class="section-description">Indulge in the essence of Bijou. Our fragrance line brings a luxurious fusion of timeless elegance and bold futurism.</p>
-        </div>
-    </section>
-
-    <!-- Fashion Section -->
-    <section class="fashion-section">
-        <div class="fashion-bg"></div>
-        <div class="section-content">
-            <h2 class="section-title">Fashion</h2>
-            <p class="section-description">Step into the future of luxury fashion. Bijou's pieces redefine elegance with cutting-edge design and craftsmanship.</p>
-        </div>
-    </section>
-
+    <!-- Collage Section -->
     <section class="section">
         <div class="collage">
-            <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 1"></div> <!-- Replace paths with actual paths -->
-            <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 2"></div>
-            <div class="collage-item"><img src="images/bijou-mugler" alt="Bijou Collage 3"></div>
-            <div class="collage-item"><img src="images/male-model" alt="Bijou Collage 4"></div>
+            <div class="collage-item"><img src="images/pixie-cut-model.jpg" alt="Bijou Collage 1"></div> <!-- Replace paths with actual paths -->
+            <div class="collage-item"><img src="images/bijou-AA-model.jpg" alt="Bijou Collage 2"></div>
+            <div class="collage-item"><img src="images/bijou-mugler.jpg" alt="Bijou Collage 3"></div>
+            <div class="collage-item"><img src="images/male-model.jpg" alt="Bijou Collage 4"></div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon">
+        <div>
+            <p>coming soon</p>
+            <img src="images/logo.png" alt="Bijou Logo"> <!-- Replace with actual path -->
         </div>
     </section>
 
