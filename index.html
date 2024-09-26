@@ -164,6 +164,54 @@
             transform: scale(1.1);
         }
 
+        /* New Fragrance and Fashion Section Styles */
+        .fragrance-section, .fashion-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fragrance-bg {
+            background-image: url('images/M-cologne'); /* Replace with actual path */
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .fashion-bg {
+            background-image: url('images/all-black-lght'); /* Replace with actual path */
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .section-content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            padding: 40px;
+            max-width: 600px;
+        }
+
+        .section-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+
+        .section-description {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -199,11 +247,11 @@
 <body>
     <!-- Logo Section -->
     <div class="logo-section" id="logo">
-        <img src="images/logo.png" alt="Bijou Logo"> <!-- Updated logo path -->
+        <img src="images/logo.png" alt="Bijou Logo"> <!-- Replace with actual path -->
     </div>
 
     <section class="section">
-        <img src="images/bijou-red-lip.jpg" alt="Bijou" class="bg-image">
+        <img src="images/bijou-red-lip" alt="Bijou" class="bg-image"> <!-- Replace with actual path -->
         <div class="overlay"></div>
         <div class="content">
             <h1>BIJOU</h1>
@@ -215,35 +263,44 @@
         </div>
     </section>
 
+    <!-- Fragrance Section -->
+    <section class="fragrance-section">
+        <div class="fragrance-bg"></div>
+        <div class="section-content">
+            <h2 class="section-title">Fragrance</h2>
+            <p class="section-description">Indulge in the essence of Bijou. Our fragrance line brings a luxurious fusion of timeless elegance and bold futurism.</p>
+        </div>
+    </section>
+
+    <!-- Fashion Section -->
+    <section class="fashion-section">
+        <div class="fashion-bg"></div>
+        <div class="section-content">
+            <h2 class="section-title">Fashion</h2>
+            <p class="section-description">Step into the future of luxury fashion. Bijou's pieces redefine elegance with cutting-edge design and craftsmanship.</p>
+        </div>
+    </section>
+
     <section class="section">
         <div class="collage">
-            <div class="collage-item"><img src="images/bijou-mugler.jpg" alt="Bijou Collage 1"></div>
-            <div class="collage-item"><img src="images/bijou-red-lip.jpg" alt="Bijou Collage 2"></div> <!-- Fixed missing quotes -->
-            <div class="collage-item"><img src="images/bijou-mugler.jpg" alt="Bijou Collage 3"></div>
-            <div class="collage-item"><img src="images/screenshot5.png" alt="Bijou Collage 4"></div>
-            <div class="collage-item"><img src="images/screenshot6.png" alt="Bijou Collage 5"></div>
-            <div class="collage-item"><img src="images/screenshot7.png" alt="Bijou Collage 6"></div>
+            <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 1"></div> <!-- Replace paths with actual paths -->
+            <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 2"></div>
+            <div class="collage-item"><img src="images/bijou-mugler" alt="Bijou Collage 3"></div>
+            <div class="collage-item"><img src="images/male-model" alt="Bijou Collage 4"></div>
         </div>
     </section>
 
     <script>
-        // Disappearing logo on scroll
-        window.addEventListener('scroll', function () {
-            const logo = document.getElementById('logo');
-            if (window.scrollY > 200) {
+        const logo = document.getElementById('logo');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
                 logo.classList.add('logo-hidden');
             } else {
                 logo.classList.remove('logo-hidden');
             }
         });
-
-        // Form submission alert
-        document.querySelector('.signup-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for signing up! We\'ll keep you updated on our latest releases.');
-            this.reset();
-        });
     </script>
+
 </body>
 
 </html>
