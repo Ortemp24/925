@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bijou - luxury redefined</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <title>BIJOU - Luxury Redefined</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -36,35 +35,20 @@
             max-height: 60px;
         }
 
-        /* Disappear Effect */
-        .logo-hidden {
-            opacity: 0;
-        }
-
-        .section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
         /* Glitching Bijou and Intro Section */
         .glitch {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-size: 4rem;
-            font-weight: 500;
+            font-weight: 700;
             color: #000;
-            letter-spacing: 0.1rem;
+            letter-spacing: 0.2rem;
             position: relative;
             animation: glitch 1.5s infinite;
+            text-transform: uppercase;
         }
 
         .glitch::before, .glitch::after {
-            content: "bijou";
+            content: "BIJOU";
             position: absolute;
             left: 0;
             top: 0;
@@ -92,10 +76,11 @@
         }
 
         .luxury-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-family: 'Anton', sans-serif;
+            font-size: 2rem;
             margin-top: 20px;
             color: #666;
+            text-transform: uppercase;
         }
 
         .notify-section {
@@ -162,39 +147,35 @@
             padding: 20px;
         }
 
-        /* Elegant Fonts */
         .content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            text-transform: lowercase;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            text-transform: uppercase;
             letter-spacing: 0.1rem;
         }
 
         .content p {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 1.4rem;
-            text-transform: lowercase;
             margin-top: 10px;
         }
 
-        /* View Our Lookbook Button */
+        /* Restyled Button */
         .lookbook-btn {
             display: inline-block;
             padding: 10px 20px;
             font-size: 1.2rem;
-            color: #fff;
-            background-color: #000;
+            color: #000;
+            background-color: transparent;
             text-transform: uppercase;
-            text-decoration: none;
-            border: 2px solid transparent;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-            margin-top: 20px;
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
         }
 
         .lookbook-btn:hover {
-            background-color: #fff;
-            color: #000;
-            border-color: #000;
+            color: #555;
         }
 
         /* Collage Section */
@@ -226,6 +207,24 @@
             transform: scale(1.1);
         }
 
+        /* Clever Hover Caption for Fragrance */
+        .fragrance-hover-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #000;
+            background-color: transparent;
+            text-transform: uppercase;
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .fragrance-hover-btn:hover {
+            color: #555;
+        }
+
         /* Coming Soon Section */
         .coming-soon {
             height: 50vh;
@@ -246,7 +245,6 @@
         .coming-soon p {
             font-size: 1.5rem;
         }
-
     </style>
 </head>
 
@@ -257,9 +255,9 @@
         <img src="images/logo.png" alt="Bijou Logo"> <!-- Replace with actual path -->
     </div>
 
-    <!-- Glitching Bijou Intro Section -->
+    <!-- Glitching BIJOU Intro Section -->
     <section class="section">
-        <div class="glitch">bijou</div>
+        <div class="glitch">BIJOU</div>
         <div class="luxury-text">luxury meets future</div>
         <div class="notify-section">
             <input class="email-input" type="email" placeholder="Enter your email">
@@ -274,8 +272,8 @@
             <img src="images/M-cologne" alt="Fragrance Background"> <!-- Replace with actual image -->
             <div class="content">
                 <h2>fragrance</h2>
-                <p>a blend of elegance and modern sophistication</p> <!-- Updated caption -->
-                <a href="#" class="lookbook-btn">View Our Lookbook</a> <!-- Lookbook Button -->
+                <p>a blend of elegance and modern sophistication</p>
+                <a href="#" class="fragrance-hover-btn">Discover Our Scents</a>
             </div>
         </div>
 
@@ -284,8 +282,8 @@
             <img src="images/all-black-lght" alt="Fashion Background"> <!-- Replace with actual image -->
             <div class="content">
                 <h2>fashion</h2>
-                <p>redefining luxury with bold design and detail</p> <!-- Shortened caption -->
-                <a href="#" class="lookbook-btn">View Our Lookbook</a> <!-- Lookbook Button -->
+                <p>redefining luxury with bold design and detail</p>
+                <a href="#" class="lookbook-btn">View Our Lookbook</a>
             </div>
         </div>
     </section>
@@ -293,17 +291,17 @@
     <!-- Collage Section -->
     <section class="section">
         <div class="collage">
-            <div class="collage-item"><img src="images/pixie-cut-model.jpg" alt="Bijou Collage 1"></div> <!-- Replace paths with actual paths -->
-            <div class="collage-item"><img src="images/bijou-AA-model.jpg" alt="Bijou Collage 2"></div>
-            <div class="collage-item"><img src="images/bijou-mugler" alt="Bijou Collage 3"></div>
+            <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 1"></div>
+            <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 2"></div>
+            <div class="collage-item"><img src="images/bijou-mug-collage" alt="Bijou Collage 3"></div>
         </div>
     </section>
 
     <!-- Coming Soon Section -->
     <section class="coming-soon">
         <div>
-            <p>coming soon</p>
-            <img src="images/logo.png" alt="Bijou Logo Small"> <!-- Replace with actual path -->
+            <p>coming soon to bijou stores worldwide</p>
+            <img src="images/blue-model" alt="Bijou"> <!-- Replace with actual image -->
         </div>
     </section>
 
