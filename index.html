@@ -103,6 +103,8 @@
             color: #fff;
             outline: none;
             transition: all 0.3s ease;
+            text-transform: lowercase;
+            font-family: 'Orbitron', sans-serif;
         }
 
         .email-input:hover, .email-input:focus {
@@ -232,11 +234,20 @@
             position: relative;
         }
 
-        /* Animated BIJOU for Coming Soon */
+        /* Enhanced Animated BIJOU for Coming Soon */
         .coming-soon .glitch {
             font-size: 5rem;
+            animation: enhanced-glitch 2s infinite;
         }
-        
+
+        @keyframes enhanced-glitch {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(5deg) scale(1.05); }
+            50% { transform: rotate(0deg) scale(1); }
+            75% { transform: rotate(-5deg) scale(1.05); }
+            100% { transform: rotate(0deg) scale(1); }
+        }
+
     </style>
 </head>
 
@@ -244,7 +255,7 @@
 
     <!-- Logo Section -->
     <div class="logo-section" id="logo">
-        <img src="images/logo.png" alt="Bijou Logo"> <!-- Replace with actual path -->
+        <img src="images/logo.png" alt="Bijou Logo"> <!-- Ensure correct path -->
     </div>
 
     <!-- Glitching BIJOU Intro Section -->
@@ -252,7 +263,7 @@
         <div class="glitch">BIJOU</div>
         <div class="luxury-text">luxury meets future</div>
         <div class="notify-section">
-            <input class="email-input" type="email" placeholder="Enter your email">
+            <input class="email-input" type="email" placeholder="enter your email">
             <button class="notify-btn">Get Notified</button>
         </div>
     </section>
@@ -261,7 +272,7 @@
     <section class="horizontal-section">
         <!-- Fragrance Section -->
         <div class="half-section">
-            <img src="images/M-cologne" alt="Fragrance Background"> <!-- Replace with actual image -->
+            <img src="images/M-cologne" alt="Fragrance Background"> <!-- Ensure correct path -->
             <div class="content">
                 <h2>fragrance</h2>
                 <p>a blend of elegance and modern sophistication</p>
@@ -271,7 +282,7 @@
 
         <!-- Fashion Section -->
         <div class="half-section">
-            <img src="images/all-black-lght" alt="Fashion Background"> <!-- Replace with actual image -->
+            <img src="images/all-black-lght" alt="Fashion Background"> <!-- Ensure correct path -->
             <div class="content">
                 <h2>fashion</h2>
                 <p>redefining luxury with bold design and detail</p>
@@ -281,18 +292,16 @@
     </section>
 
     <!-- Collage Section -->
-    <section class="section">
-        <div class="collage">
-            <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 1"></div>
-            <div class="collage-item"><img src="images/bijou-mugler" alt="Bijou Collage 2"></div>
-            <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 3"></div>
-        </div>
-    </section> 
+    <section class="collage">
+        <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 1"></div>
+        <div class="collage-item"><img src="images/bijou-mugler" alt="Bijou Collage 2"></div>
+        <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 3"></div>
+    </section>
 
     <!-- Coming Soon Section -->
     <section class="coming-soon">
-        <div class="glitch">BIJOU</div> <!-- Animated "Bijou" -->
-        <p>coming soon to bijou stores worldwide</p>
+        <div class="glitch">BIJOU</div> <!-- Enhanced Animated "Bijou" -->
+        <p>coming soon worldwide</p>
     </section>
 
 </body>
