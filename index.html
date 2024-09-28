@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIJOU - Luxury Redefined</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             background-color: #fff;
             color: #333;
             overflow-x: hidden;
@@ -35,7 +35,7 @@
             max-height: 60px;
         }
 
-        /* Glitching Bijou and Intro Section */
+        /* Glitching Bijou at top */
         .glitch {
             font-family: 'Orbitron', sans-serif;
             font-size: 4rem;
@@ -45,6 +45,7 @@
             position: relative;
             animation: glitch 1.5s infinite;
             text-transform: uppercase;
+            text-align: center;
         }
 
         .glitch::before, .glitch::after {
@@ -75,14 +76,17 @@
             100% { clip: rect(0, 900px, 0, 0); }
         }
 
+        /* Centered luxury meets future */
         .luxury-text {
-            font-family: 'Anton', sans-serif;
-            font-size: 2rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
             margin-top: 20px;
             color: #666;
             text-transform: uppercase;
+            text-align: center;
         }
 
+        /* Notify Section - Email */
         .notify-section {
             margin-top: 40px;
             display: flex;
@@ -91,20 +95,30 @@
         }
 
         .email-input {
-            padding: 10px;
-            font-size: 1rem;
-            width: 300px;
+            padding: 12px 15px;
+            font-size: 1.2rem;
+            width: 350px;
             border: 2px solid #000;
-            margin-bottom: 10px;
+            background: #000;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .email-input:hover, .email-input:focus {
+            border-color: #666;
+            background: #222;
         }
 
         .notify-btn {
-            padding: 10px 30px;
-            font-size: 1rem;
+            padding: 12px 35px;
+            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
             background-color: #000;
             color: #fff;
             cursor: pointer;
             border: none;
+            text-transform: uppercase;
             transition: background-color 0.3s ease;
         }
 
@@ -148,14 +162,12 @@
         }
 
         .content h2 {
-            font-family: 'Bebas Neue', sans-serif;
             font-size: 3.5rem;
             text-transform: uppercase;
             letter-spacing: 0.1rem;
         }
 
         .content p {
-            font-family: 'Roboto', sans-serif;
             font-size: 1.4rem;
             margin-top: 10px;
         }
@@ -207,24 +219,6 @@
             transform: scale(1.1);
         }
 
-        /* Clever Hover Caption for Fragrance */
-        .fragrance-hover-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            color: #000;
-            background-color: transparent;
-            text-transform: uppercase;
-            text-decoration: underline;
-            border: none;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .fragrance-hover-btn:hover {
-            color: #555;
-        }
-
         /* Coming Soon Section */
         .coming-soon {
             height: 50vh;
@@ -234,17 +228,15 @@
             text-align: center;
             background-color: #000;
             color: #fff;
-            font-size: 2rem;
+            font-size: 3rem;
+            position: relative;
         }
 
-        .coming-soon img {
-            max-height: 100px;
-            margin-top: 20px;
+        /* Animated BIJOU for Coming Soon */
+        .coming-soon .glitch {
+            font-size: 5rem;
         }
-
-        .coming-soon p {
-            font-size: 1.5rem;
-        }
+        
     </style>
 </head>
 
@@ -269,7 +261,7 @@
     <section class="horizontal-section">
         <!-- Fragrance Section -->
         <div class="half-section">
-            <img src="images/M-cologne" alt="Fragrance Background"> <!-- Replace with actual image -->
+            <img src="images/M-cologne.jpg" alt="Fragrance Background"> <!-- Replace with actual image -->
             <div class="content">
                 <h2>fragrance</h2>
                 <p>a blend of elegance and modern sophistication</p>
@@ -279,7 +271,7 @@
 
         <!-- Fashion Section -->
         <div class="half-section">
-            <img src="images/all-black-lght" alt="Fashion Background"> <!-- Replace with actual image -->
+            <img src="images/all-black-lght.jpg" alt="Fashion Background"> <!-- Replace with actual image -->
             <div class="content">
                 <h2>fashion</h2>
                 <p>redefining luxury with bold design and detail</p>
@@ -291,18 +283,16 @@
     <!-- Collage Section -->
     <section class="section">
         <div class="collage">
-            <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 1"></div>
-            <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 2"></div>
-            <div class="collage-item"><img src="images/bijou-mug-collage" alt="Bijou Collage 3"></div>
+            <div class="collage-item"><img src="images/pixie-cut-model.jpg" alt="Bijou Collage 1"></div>
+            <div class="collage-item"><img src="images/golden-face-model.jpg" alt="Bijou Collage 2"></div>
+            <div class="collage-item"><img src="images/braided-crown-collage.jpg" alt="Bijou Collage 3"></div>
         </div>
     </section>
 
     <!-- Coming Soon Section -->
     <section class="coming-soon">
-        <div>
-            <p>coming soon to bijou stores worldwide</p>
-            <img src="images/blue-model" alt="Bijou"> <!-- Replace with actual image -->
-        </div>
+        <div class="glitch">BIJOU</div> <!-- Animated "Bijou" -->
+        <p>coming soon to bijou stores worldwide</p>
     </section>
 
 </body>
