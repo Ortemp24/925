@@ -161,6 +161,7 @@
             z-index: 1;
             color: #fff;
             padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
         }
 
         .content h2 {
@@ -172,10 +173,11 @@
         .content p {
             font-size: 1.4rem;
             margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow */
         }
 
-        /* Restyled Button */
-        .lookbook-btn {
+        /* Uppercase Button */
+        .fragrance-hover-btn, .lookbook-btn {
             display: inline-block;
             padding: 10px 20px;
             font-size: 1.2rem;
@@ -188,7 +190,7 @@
             transition: color 0.3s ease;
         }
 
-        .lookbook-btn:hover {
+        .fragrance-hover-btn:hover, .lookbook-btn:hover {
             color: #555;
         }
 
@@ -234,18 +236,30 @@
             position: relative;
         }
 
-        /* Enhanced Animated BIJOU for Coming Soon */
-        .coming-soon .glitch {
-            font-size: 5rem;
-            animation: enhanced-glitch 2s infinite;
+        /* Sleek Animated BIJOU with Logo for Coming Soon */
+        .coming-soon .bijou-logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        @keyframes enhanced-glitch {
-            0% { transform: rotate(0deg) scale(1); }
-            25% { transform: rotate(5deg) scale(1.05); }
-            50% { transform: rotate(0deg) scale(1); }
-            75% { transform: rotate(-5deg) scale(1.05); }
-            100% { transform: rotate(0deg) scale(1); }
+        .coming-soon .bijou-logo img {
+            width: 100px;
+            margin-right: 15px;
+        }
+
+        .coming-soon .bijou-logo .bijou-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            color: #fff;
+            text-transform: uppercase;
+            animation: fadeInOut 3s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
         }
 
     </style>
@@ -274,34 +288,36 @@
         <div class="half-section">
             <img src="images/M-cologne" alt="Fragrance Background"> <!-- Ensure correct path -->
             <div class="content">
-                <h2>fragrance</h2>
+                <h2>a blend of elegance</h2>
                 <p>a blend of elegance and modern sophistication</p>
-                <a href="#" class="fragrance-hover-btn">Discover Our Scents</a>
+                <button class="fragrance-hover-btn">discover our scents</button>
             </div>
         </div>
-
         <!-- Fashion Section -->
         <div class="half-section">
             <img src="images/all-black-lght" alt="Fashion Background"> <!-- Ensure correct path -->
             <div class="content">
-                <h2>fashion</h2>
+                <h2>redefining luxury</h2>
                 <p>redefining luxury with bold design and detail</p>
-                <a href="#" class="lookbook-btn">View Our Lookbook</a>
+                <button class="lookbook-btn">view our lookbook</button>
             </div>
         </div>
     </section>
 
     <!-- Collage Section -->
     <section class="collage">
-        <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 1"></div>
+        <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 1"></div>
         <div class="collage-item"><img src="images/bijou-mugler" alt="Bijou Collage 2"></div>
-        <div class="collage-item"><img src="images/pixie-cut-model" alt="Bijou Collage 3"></div>
+        <div class="collage-item"><img src="images/bijou-AA-model" alt="Bijou Collage 3"></div>
     </section>
 
     <!-- Coming Soon Section -->
     <section class="coming-soon">
-        <div class="glitch">BIJOU</div> <!-- Enhanced Animated "Bijou" -->
-        <p>coming soon worldwide</p>
+        <div class="bijou-logo">
+            <img src="images/logo.png" alt="Bijou Logo">
+            <div class="bijou-text">BIJOU</div>
+        </div>
+        <p>coming soon to bijou stores worldwide</p>
     </section>
 
 </body>
